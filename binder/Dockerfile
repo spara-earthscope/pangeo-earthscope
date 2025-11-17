@@ -3,4 +3,4 @@ FROM public.ecr.aws/earthscope-dev/geolab/virtual_desktop:virtual_desktop-c6b4a6
 
 RUN pip install -U scikit-learn
 
-COPY /binder/hello_world.ipynb ~/hello_world.ipynb
+COPY /binder/hello_world.ipynb /tmp/hello_world.ipynb
