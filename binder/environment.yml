@@ -162,7 +162,7 @@ dependencies:
   - earthscope-cli==1.0.1
   - earthscopestraintools
   - hypoinvpy
-  - gnssrefl
+  # - gnssrefl
   - jupyter_contrib_nbextensions
   - jupyterlab_jupyterbook_navigation
   - jupyter-resource-usage
