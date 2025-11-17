@@ -24,5 +24,4 @@ dependencies:
   - graphviz
   - nodejs
   - pip:
-    - kubernetes
     - graphviz
