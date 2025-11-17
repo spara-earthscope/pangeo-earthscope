@@ -1,7 +1,7 @@
-FROM pangeo/pytorch-notebook:2025.01.24
+FROM pangeo/base-notebook:2025.08.14
 
 USER root
-ENV DEBIAN_FRONTEND=noninteractive
+ENV DEBIAN_FRONTEND noninteractive
 ENV PATH ${NB_PYTHON_PREFIX}/bin:$PATH
 
 # Needed for apt-key to work, gcc compiler for 
@@ -21,8 +21,6 @@ COPY environment.yml /tmp/
 RUN mamba env update --name ${CONDA_ENV} -f /tmp/environment.yml \
     && pip cache purge \
     && mamba clean -afy
-RUN conda install awscli==2.27.0
-RUN conda create -n passoft3 passoft -c https://onyx.passcal.nmt.edu/passcal -c conda-forge
 
 # Set up the start command 
 USER ${NB_USER}
