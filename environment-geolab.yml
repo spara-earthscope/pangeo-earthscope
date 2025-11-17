@@ -152,3 +152,22 @@ dependencies:
 - xxhash
 - xvec
 - zarr>=3.0.8
+# Packages required by ES
+- tiledb
+- pip
+- pip:
+  - awswrangler
+  - dascore
+  - earthscope-sdk==1.2.0b1
+  - earthscope-cli==1.0.1
+  - earthscopestraintools
+  - hypoinvpy
+  - jupyter_contrib_nbextensions
+  - jupyterlab_jupyterbook_navigation
+  - jupyter-resource-usage
+  - obspy==1.4.1
+  - polars
+  - pygmt==0.14.2
+  - pynlloc
+  - pyocto
+  - pyrocko
