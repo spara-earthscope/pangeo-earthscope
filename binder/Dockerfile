@@ -1,5 +1,4 @@
-FROM pangeo/base-notebook:2025.08.14
-
+FROM public.ecr.aws/earthscope-dev/geolab/virtual_desktop:virtual_desktop-c6b4a6a3
 USER root
 ENV DEBIAN_FRONTEND noninteractive
 ENV PATH ${NB_PYTHON_PREFIX}/bin:$PATH
