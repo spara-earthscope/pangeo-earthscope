@@ -1,7 +1,7 @@
 FROM public.ecr.aws/earthscope-dev/geolab/virtual_desktop:virtual_desktop-c6b4a6a3
 USER root
-ENV DEBIAN_FRONTEND noninteractive
-ENV PATH ${NB_PYTHON_PREFIX}/bin:$PATH
+ENV DEBIAN_FRONTEND=noninteractive
+ENV PATH=${NB_PYTHON_PREFIX}/bin:$PATH
 
 # Needed for apt-key to work, gcc compiler for 
 RUN apt-get update -qq --yes > /dev/null \
@@ -15,7 +15,7 @@ RUN apt-get update -qq --yes > /dev/null \
 
 USER ${NB_USER}
 
-COPY environment.yml /tmp/
+COPY ./environment.yml /tmp/
 
 RUN mamba env update --name ${CONDA_ENV} -f /tmp/environment.yml \
     && pip cache purge \
