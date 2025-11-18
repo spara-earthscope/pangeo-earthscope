@@ -3,7 +3,7 @@ channels:
 
 dependencies:
   # Packages required by ES
-  - seismon
+  - instaseis
   - pip
   - pip:
     - pyprop8

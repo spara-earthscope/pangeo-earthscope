@@ -1,7 +1,7 @@
 FROM public.ecr.aws/earthscope-dev/geolab/geolab-default:default_pytorch_split-f59cda68
 
 # Adding packages in the Dockerfile example
-# RUN pip install -U scikit-learn python-package
+RUN pip install -U scikit-learn python-package
 
 # Adding packages from an environment.yml file
 COPY /binder/environment.yml /tmp
