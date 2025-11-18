@@ -16,4 +16,4 @@ RUN mamba env update --name ${CONDA_ENV} -f /tmp/environment.yml \
 # Write files to other directories such as /tmp and copy it to home directory.
 RUN mkdir -p /tmp/notebooks
 WORKDIR /tmp/notebooks
-COPY hello_world.ipynb  /tmp/notebooks
+COPY /binder/hello_world.ipynb  /tmp/notebooks
