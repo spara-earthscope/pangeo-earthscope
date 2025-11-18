@@ -1,5 +1,0 @@
-#!/bin/bash
-
-cp /tmp/hello_world.ipynb /home/jovyan/hello_world.ipynb
-
-#EOF
