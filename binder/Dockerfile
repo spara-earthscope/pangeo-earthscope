@@ -4,8 +4,8 @@ FROM public.ecr.aws/earthscope-dev/geolab/geolab-default:default_pytorch_split-f
 # RUN pip install -U scikit-learn python-package
 
 # Adding packages from an environment.yml file
-COPY environment.yml /tmp
-WORKDIR /tmp
+COPY /binder/environment.yml /tmp
+
 RUN mamba env update --name ${CONDA_ENV} -f /tmp/environment.yml \
     && pip cache purge \
     && mamba clean -afy
